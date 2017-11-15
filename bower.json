@@ -6,7 +6,7 @@
   "homepage": "https://github.com/taylortom/adapt-theme-presentation",
   "issues": "https://github.com/taylortom/adapt-theme-presentation/issues",
   "displayName": "Adapt Presentation",
-  "theme": "community",
+  "theme": "presentation",
   "description": "A theme for Adapt-based presentations",
   "main": "js/presentation.js",
   "keywords": [
