@@ -106,6 +106,8 @@
                 &.transparent {
                     background-color: transparent;
                     color: white;
+                    max-width: 90%;
+                    margin: 0 auto; 
                     .block-title {
                         color: white;
                     }
@@ -125,6 +127,14 @@
                 &.origami {
                     background-image: url('assets/origami-white-bg.png');
                     background-size: cover;
+                }
+                &.team {
+                    .block-style(@tertiary-color, white);
+                    background-image: url('assets/who-we-are-medium.jpg');
+                    background-repeat: repeat;
+                }
+                &.banner {
+                  display: flex;
                 }
             }
         }
