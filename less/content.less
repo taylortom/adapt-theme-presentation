@@ -10,6 +10,9 @@
         &-inner {
           margin: 0 auto;
           margin-top: -2%;
+          .page-header-content {
+            max-width: none;
+          }
         }
     }
     .page-shadow {
@@ -19,7 +22,7 @@
         height: 40px;
         box-shadow: 0 -25px 40px 0 rgba(0,0,0,0.12);
     }
-    > .no-shadow .page-shadow {
+    &.no-shadow .page-shadow {
       display: none;
     }
 
@@ -51,12 +54,14 @@
             .block {
                 height: 100vh;
                 &-inner {
-                  max-width: 80%;
+                  max-width: 100%;
+                  padding: 60px 0;
                 }
                 .block-title {
                     font-size: @block-title-font-size;
                     color: @font-color;
                     text-align: center;
+                    margin-bottom: 60px;
                 }
                 .block-body {
                     font-size: @block-body-font-size;
@@ -66,11 +71,14 @@
                 .component {
                     .component-inner {
                         background-color: transparent;
-                        padding: 20px 0;
+                        padding: 0 100px;
                         .component-title {
                             font-weight: 400;
                         }
                     }
+                }
+                .graphic-component .component-inner {
+                    padding: 0;
                 }
                 /*
                 * Reusable block styles

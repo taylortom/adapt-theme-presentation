@@ -31,6 +31,7 @@ define(function(require) {
 		function slideUp() {
 			if(currentBlock > 0) {
 				slide($($blocks[--currentBlock]));
+				return;
 			}
 			if(currentBlock === 0) {
 				slide($('body'));
