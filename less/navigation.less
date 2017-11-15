@@ -1,0 +1,102 @@
+.navigation {
+    box-shadow: none;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    background-color: transparent;
+    color: white;
+
+    .navigation-inner {
+        .logo {
+            margin-top: 12px;
+            margin-left: 25px;
+            float: left;
+            width: 37px;
+            height: 38px;
+            background-image: url('assets/nav_logo_white.png');
+        }
+
+        .page-level-progress-navigation {
+
+            .page-level-progress-navigation-completion {
+                background-color: transparent;
+            }
+
+            &:hover {
+                .page-level-progress-navigation-completion {
+                    background-color: transparent;
+                    border-color: @secondary-color;
+                    .page-level-progress-navigation-bar {
+                        background-color: @secondary-color;
+                        border-color: @secondary-color;
+                    }
+                }
+            }
+        }
+
+        .icon:hover {
+            color: @secondary-color;
+        }
+    }
+
+    &.white {
+        background-color: @white;
+        color: @primary-color;
+        .navigation-inner {
+            .logo {
+                background-image: url('assets/nav_logo_blue.png');
+            }
+
+            .page-level-progress-navigation {
+                .page-level-progress-navigation-completion {
+                    border-color: @primary-color;
+                    .page-level-progress-navigation-bar {
+                        background-color: @primary-color;
+                        border-color: @primary-color;
+                    }
+                }
+            }
+
+            .icon {
+                color: @primary-color;
+            }
+        }
+    }
+    @transition-dur: 0.5s;
+    -webkit-transition: background-color @transition-dur;
+    -moz-transition: background-color @transition-dur;
+    transition: background-color @transition-dur;
+
+    /**
+    * presentation stuff
+    */
+    .page-level-progress-navigation {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      padding: 0 !important;
+      margin: 0;
+      &-completion {
+        width: 100%;
+        height: 10px;
+        border: none;
+        // border-bottom: 2px solid @secondary-color;
+        border-radius: 0;
+        background: fade(@secondary-color, 20%) !important;
+        // background: rgba(255,255,255,0.3) !important;
+      }
+      &-bar {
+        background: @secondary-color;
+        border: none;
+      }
+    }
+    border-bottom: none;
+    .navigation-inner .logo {
+      display: none;
+    }
+    &.minimised {
+      .navigation-drawer-toggle-button,
+      .navigation-back-button {
+        display: none;
+      }
+    }
+}
