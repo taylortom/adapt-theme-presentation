@@ -107,7 +107,7 @@
                     background-color: transparent;
                     color: white;
                     max-width: 90%;
-                    margin: 0 auto; 
+                    margin: 0 auto;
                     .block-title {
                         color: white;
                     }
@@ -124,9 +124,16 @@
                         }
                     }
                 }
-                &.origami {
-                    background-image: url('assets/origami-white-bg.png');
+                &.beige {
+                    background-color: #f5f5f5;
+                }
+                &.origami-light {
+                    background-image: url('assets/origami-overlay-light.png');
                     background-size: cover;
+                }
+                &.origami-dark {
+                  background-image: url('assets/origami-overlay-dark.png');
+                  background-size: cover;
                 }
                 &.team {
                     .block-style(@tertiary-color, white);
