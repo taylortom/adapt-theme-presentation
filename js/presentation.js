@@ -5,9 +5,13 @@ define(function(require) {
 	var $blocks;
 
 	Adapt.on('pageView:postRender', function(view) {
+		$('#wrapper').append(Handlebars.templates['pageCount']());
+
 		_.defer(function() {
-			currentBlock = -1;
 			$blocks = view.$('.block');
+			$('#pageCount .current').text(0);
+			$('#pageCount .total').text($blocks.length);
+			currentBlock = -1;
 		});
 	});
 
@@ -49,7 +53,11 @@ define(function(require) {
 		function slide($div) {
 			$('html,body').stop().animate({
 				scrollTop: $div.offset().top
-			}, 1000);
+			}, 1000, updatePageCount);
+		}
+
+		function updatePageCount() {
+			$('#pageCount .current').text(currentBlock+1);
 		}
 	});
 });
