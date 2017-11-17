@@ -47,7 +47,7 @@ define(function(require) {
 
 
 		function slide($div) {
-			$('html,body').animate({
+			$('html,body').stop().animate({
 				scrollTop: $div.offset().top
 			}, 1000);
 		}
